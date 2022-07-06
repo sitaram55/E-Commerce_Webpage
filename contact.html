@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/17951b0b4b.js" crossorigin="anonymous">
+        </script>
+
+    </head>
+    <body>
+        <nav class="nav nav_top">
+            <div class="logo">
+                <a href="index.html"><img src="1Stop 01.png"width=150px>
+            </div>
+            <div class="nav_side">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+                <a href="Login Register.html">Login/Register</a>
+            </div>
+
+        </nav>
+
+        <div class="contact_container">
+            <h2>Contact Us</h2>
+            <div class="g_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15553.944999104684!2d77.6303252!3d12.9407072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8a70d2a7a9a2ae31!2s1stop!5e0!3m2!1sen!2sin!4v1630305127195!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact_content">
+                <p><b>Address:Pune,Maharashtra,India</b></p>
+                <p><b>Call: +91 9156835699</b></p>
+                <p><b>Mail: support@1stop.ai</b></p>
+
+            </div>
+        </div>
+        <div class="feed">
+            <h2>Write a review</h2>
+            <div class="feed_form" method="POST">
+                <form name="submit-googlesheet">
+                    <input type="text" name="Name"placeholder="Name"><br>
+                    <input type="email" name="Email" placeholder="Enter your E-mail ID"><br>
+                    <input type="number" name="Number" placeholder="Enter your Contact number"><br>
+                    <textarea rows="5" cols="7" name="Review" placeholder="Give your feeback"></textarea><br>
+                    <button type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="footer_logo">
+                <a href="index.html"><img src="1Stop 01.png"width=150px></a>
+            </div>
+            <div class="pages">
+             <h3>Pages</h3>
+                <a href="about.html">About Us</a>|
+                <a href="services.html">Services</a>|
+                <a href="blogs.html">Blogs</a>|
+                <a href="Login Register.html">Login</a>|
+                <a href="Login Register.html">Sign Up</a>|
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href="">Privacy Policy</a>|
+                <a href="">Terms of Use</a>|
+                <a href="">Refund Policy</a>|
+            </div>
+            <div class="Social">
+                <h3>Follow us</h3>
+                <a href="https://www.facebook.com/pages/category/Education-Website/1Stopai-102490171820303/" target="_black"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/1stop.ai/?hl=en" target="_black"><i class="fab fa-instagram"></i></a>
+
+            </div>
+            <div class="Contact">
+                <h3>Contact Us</h3>
+                <a href="https://api.Whatsapp.com/send?phone=+919876543210" target="_blank"><i class="fab fa-whatsapp-square"></i></a>
+                <a href="tel:+919876543210"><i class="fas fa-phone"></i></a>
+                <a href="mailto: support@1stop.ai"><i class="far fa-envelope"></i></a>
+            </div>
+
+            <hr>
+
+            <p>Copyright &copy; 2021 1stop.All rights reserved</p>
+        </footer>
+
+        <script type="text/javascript">
+         const scriptURL = 'https://script.google.com/macros/s/AKfycbyrr6Okp_Omj_9cIOwcI4LOEY9VPgfA9TNiKuhbAJ6wKkrvZ-eNew91HtQ9oN6O4v3qFQ/exec'
+            const form = document.forms["submit-googlesheet"]
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank You, We'll contact you soon.."))
+                .catch(error => console.error('Error!', error.message))
+            })
+
+        </script>
+
+    </body>
+</html>
